@@ -11,7 +11,7 @@ Main() {
     ImportQuirks()
     InitTray()
     SetActiveQuirk()
-    RegisterQuirkHotstrings()
+    RegisterAppHotstrings()
 }
 
 Main()

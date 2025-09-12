@@ -14,8 +14,8 @@ SetActiveQuirk(name?) {
     if (IsSet(name)) {
         activeQuirk := GetQuirkByAnyName(name)
     } else {
-        if Settings.RememberLast && FileExist("persistent") {
-            activeQuirk := GetQuirkByAnyName(Trim(FileRead("persistent")))
+        if Settings.RememberLast {
+            activeQuirk := GetQuirkByAnyName(Settings.LastUsed)
         } else {
             activeQuirk := GetQuirkByAnyName(Settings.DefaultQuirk)
         }
