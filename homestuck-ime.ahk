@@ -1,15 +1,17 @@
 #Requires AutoHotkey v2.0
 #SingleInstance Force
-; entry file, note this in readme
+; TODO entry file, note this in readme
 
-#include options.ahk
-#Include hotstrings.ahk
+#include settings.ahk
+#Include input.ahk
 #Include quirks.ahk
 #Include traymenu.ahk
 
 Main() {
-    ImportQuirks() ; Construct an array of typing quirks
+    ImportQuirks()
     InitTray()
+    SetActiveQuirk()
+    RegisterQuirkHotstrings()
 }
 
 Main()
