@@ -45,7 +45,7 @@ InitTray() {
     
     tray.Add("Convert on Enter", ToggleEnterConversion)
     if Settings.ConvertOnEnter {
-        tray.Check("Remember last used")
+        tray.Check("Convert on Enter")
     }
 
     tray.Add()

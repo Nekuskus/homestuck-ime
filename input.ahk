@@ -4,7 +4,9 @@
 
 #SuspendExempt
 !h::ToggleSuspend
-PrefixHotstring("suspend", ToggleSuspend)
+:*:hs;suspend"::{
+    ToggleSuspend()
+}
 #SuspendExempt False
 
 ToggleSuspend(*) {
@@ -39,12 +41,12 @@ ProcessCurrentLine(*) {
         return
     }
 
-    A_Clipboard := 0
+    A_Clipboard := ""
     Send("{End}")
     Send("+{Home}")
     Sleep(150)
     Send("^x")
-    Sleep(150)
+    ClipWait(2)
     
     line := A_Clipboard
     for entry in activeQuirk.Replacements {
