@@ -12,6 +12,8 @@ Main() {
     InitTray()
     SetActiveQuirk()
     RegisterAppHotstrings()
+
+    ToggleSuspend()
 }
 
 Main()
