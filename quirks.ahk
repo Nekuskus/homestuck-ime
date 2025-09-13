@@ -144,7 +144,7 @@ class TypingQuirk extends Object {
 
 ImportQuirks() {
     loop files "quirks\*.ini", 'FR' {
-        if SubStr(A_LoopField, 1, 1) == '_' {
+        if SubStr(A_LoopFileName, 1, 1) == '_' {
             continue
         }
 

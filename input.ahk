@@ -18,6 +18,7 @@ PrefixHotstring(str, value, enabled := "on") {
 
 RegisterAppHotstrings() {
     PrefixHotstring("reload", (*) => Reload()) 
+    PrefixHotstring("exit", (*) => ExitApp(0)) 
     
     PrefixHotstring("te", ToggleEnterConversion)
     PrefixHotstring("tr", ToggleRememberLast)
